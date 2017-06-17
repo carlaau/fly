@@ -3,17 +3,17 @@
 ## 技术栈
 aardio + carlmvc + mysql + layui
 
-## 后端mvc框架 carlmvc
-https://github.com/carlaau/carlmvc
-
-## 前端框架 fly社区模板
-https://github.com/layui/fly
-
 ## 项目预览地址
 http://fly.aardio.org
 
 ## 项目开源地址
 https://github.com/carlaau/fly
+
+## 后端mvc框架 carlmvc
+https://github.com/carlaau/carlmvc
+
+## 前端框架 fly社区模板
+https://github.com/layui/fly
 
 ## 操作说明
 1.下载aardio开发环境 http://www.aardio.com
@@ -31,8 +31,8 @@ https://github.com/carlaau/fly
 
 6.点击插件上“调试发布" - “重新生成”(或自己点ide上的发布,发布后拷贝\publish\lib目录到\aardio-cgi\lib\下)
 
-7.打开iis网站浏览
+7.打开iis网站浏览(如果打开失败,请"清理"下,重复操作第6步)
 
 ## 更新日志
 2017-06-17
-登录,注册,个人资料修改 
+登录,注册,个人资料修改,密码修改

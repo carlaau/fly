@@ -55,8 +55,11 @@ user = class {
 		if( #pass < 6 || #pass > 16) return false,"密码在6到16个字符之间";
 		
 		if( pass != repass ) return false,"两次密码输入不一致";
-
-		return webUserSvc.editPwd(nowpass,pass,this.base.userId); 
+		
+		var ok,err = webUserSvc.editPwd(nowpass,pass,this.base.userId);
+		if(!ok) return false,err; 
+		..carl.session.clear()
+		return true
 	}
 
 	

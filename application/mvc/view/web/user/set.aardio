@@ -13,12 +13,13 @@ owner.view.loadcode("web.common.header",...);
   <div class="fly-panel fly-panel-user" pad20>
     <div class="layui-tab layui-tab-brief" lay-filter="user">
       <ul class="layui-tab-title" id="LAY_mine">
-        <li class="layui-this" lay-id="info">我的资料</li>
+        <li class="layui-this" lay-id="info">我的资料</li>       
         <li lay-id="avatar">头像</li>
         <li lay-id="pass">密码</li>
        <!-- <li lay-id="bind">帐号绑定</li>-->
       </ul>
       <div class="layui-tab-content" style="padding: 20px 0;">
+
         <div class="layui-form layui-form-pane layui-tab-item layui-show">
           <form method="post" action="<?=mvcapp.urlAction("save","web.user")?>">
             <div class="layui-form-item">
@@ -55,8 +56,9 @@ owner.view.loadcode("web.common.header",...);
             <div class="layui-form-item">
               <button class="layui-btn" key="set-mine" lay-filter="*" lay-submit>确认修改</button>
             </div>
+            </form>
           </div>
-          
+
           <div class="layui-form layui-form-pane layui-tab-item">
             <div class="layui-form-item">
               <div class="avatar-add">
@@ -71,15 +73,13 @@ owner.view.loadcode("web.common.header",...);
           </div>
           
           <div class="layui-form layui-form-pane layui-tab-item">
-            <form action="<?=mvcapp.urlAction("editPwd","web.user")?>" method="post">
-              <!--{{# if(!user.weibo_id && !user.qq_id){ }}-->
+            <form method="post" action="<?=mvcapp.urlAction("editPwd","web.user")?>">              
               <div class="layui-form-item">
                 <label for="L_nowpass" class="layui-form-label">当前密码</label>
                 <div class="layui-input-inline">
                   <input type="password" id="L_nowpass" name="nowpass" required lay-verify="required" autocomplete="off" class="layui-input">
                 </div>
-              </div>
-             <!-- {{# } }}-->
+              </div>             
               <div class="layui-form-item">
                 <label for="L_pass" class="layui-form-label">新密码</label>
                 <div class="layui-input-inline">
@@ -123,8 +123,8 @@ owner.view.loadcode("web.common.header",...);
               </li>
             </ul>
           </div>
-        </div>
 
+        </div>
       </div>
     </div>
   </div>
