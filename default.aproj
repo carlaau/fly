@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project ver="10" name="fly.aardio.org" libEmbed="true" icon="..." ui="website" output="carlmvc.exe" CompanyName="aardio.org" FileDescription="carlmvc" LegalCopyright="Copyright (C) carl 2016" ProductName="carlmvc" InternalName="carlmvc" FileVersion="0.0.0.1" ProductVersion="0.0.0.1" publishDir="/Publish/" dstrip="false">
+	<file name="main" path="main.aardio" comment="启动程序代码"/>
+	<folder name="application" path="application" comment="application" embed="false">
+		<folder name="common" path="application\common" comment="application\common" embed="false">
+			<file name="function.aardio" path="application\common\function.aardio" comment="application\common\function.aardio"/>
+			<file name="load.aardio" path="application\common\load.aardio" comment="application\common\load.aardio"/>
+		</folder>
+		<folder name="filters" path="application\filters" comment="application\filters" embed="false">
+			<file name="mvcapp.aardio" path="application\filters\mvcapp.aardio" comment="application\filters\mvcapp.aardio"/>
+		</folder>
+		<folder name="mvc" path="application\mvc" comment="application\mvc" embed="false">
+			<folder name="controller" path="application\mvc\controller" comment="application\mvc\controller" embed="false">
+				<file name="defaultCtl.aardio" path="application\mvc\controller\defaultCtl.aardio" comment="application\mvc\controller\defaultCtl.aardio"/>
+				<folder name="web" path="application\mvc\controller\web" comment="application\mvc\controller\web">
+					<file name="baseCtl.aardio" path="application\mvc\controller\web\baseCtl.aardio" comment="application\mvc\controller\web\baseCtl.aardio"/>
+					<file name="loginCtl.aardio" path="application\mvc\controller\web\loginCtl.aardio" comment="application\mvc\controller\web\loginCtl.aardio"/>
+					<file name="messageCtl.aardio" path="application\mvc\controller\web\messageCtl.aardio" comment="application\mvc\controller\web\messageCtl.aardio"/>
+					<file name="regCtl.aardio" path="application\mvc\controller\web\regCtl.aardio" comment="application\mvc\controller\web\regCtl.aardio"/>
+					<file name="userCtl.aardio" path="application\mvc\controller\web\userCtl.aardio" comment="application\mvc\controller\web\userCtl.aardio"/>
+				</folder>
+			</folder>
+			<folder name="view" path="application\mvc\view" comment="application\mvc\view" embed="false">
+				<folder name="web" path="application\mvc\view\web" comment="application\mvc\view\web" embed="false">
+					<folder name="common" path="application\mvc\view\web\common" comment="application\mvc\view\web\common" embed="false">
+						<file name="footer.aardio" path="application\mvc\view\web\common\footer.aardio" comment="application\mvc\view\web\common\footer.aardio"/>
+						<file name="header.aardio" path="application\mvc\view\web\common\header.aardio" comment="application\mvc\view\web\common\header.aardio"/>
+						<file name="user-nav.aardio" path="application\mvc\view\web\common\user-nav.aardio" comment="application\mvc\view\web\common\user-nav.aardio"/>
+					</folder>
+					<folder name="user" path="application\mvc\view\web\user" comment="application\mvc\view\web\user" embed="false">
+						<file name="login.aardio" path="application\mvc\view\web\user\login.aardio" comment="application\mvc\view\web\user\login.aardio"/>
+						<file name="reg.aardio" path="application\mvc\view\web\user\reg.aardio" comment="application\mvc\view\web\user\reg.aardio"/>
+						<file name="index.aardio" path="application\mvc\view\web\user\index.aardio" comment="application\mvc\view\web\user\index.aardio"/>
+						<file name="set.aardio" path="application\mvc\view\web\user\set.aardio" comment="application\mvc\view\web\user\set.aardio"/>
+						<file name="home.aardio" path="application\mvc\view\web\user\home.aardio" comment="application\mvc\view\web\user\home.aardio"/>
+						<file name="message.aardio" path="application\mvc\view\web\user\message.aardio" comment="application\mvc\view\web\user\message.aardio"/>
+						<file name="activate.aardio" path="application\mvc\view\web\user\activate.aardio" comment="application\mvc\view\web\user\activate.aardio"/>
+						<file name="forget.aardio" path="application\mvc\view\web\user\forget.aardio" comment="application\mvc\view\web\user\forget.aardio"/>
+					</folder>
+				</folder>
+			</folder>
+		</folder>
+	</folder>
+	<folder name="carlmvc" path="carlmvc" comment="carlmvc" embed="false">
+		<file name="base.aardio" path="carlmvc\base.aardio" comment="carlmvc\base.aardio"/>
+		<file name="config.aardio" path="carlmvc\config.aardio" comment="carlmvc\config.aardio"/>
+		<file name="start.aardio" path="carlmvc\start.aardio" comment="carlmvc\start.aardio"/>
+		<file name="version.aardio" path="carlmvc\version.aardio" comment="carlmvc\version.aardio"/>
+	</folder>
+	<folder name="config" path="config" comment="config" embed="false">
+		<file name="database.aardio" path="config\database.aardio" comment="config\database.aardio"/>
+		<file name="mvcconfig.aardio" path="config\mvcconfig.aardio" comment="config\mvcconfig.aardio"/>
+		<file name="webconfig.aardio" path="config\webconfig.aardio" comment="config\webconfig.aardio"/>
+	</folder>
+	<folder name="log" path="log" comment="log" embed="false"/>
+	<folder name="www" path="www" comment="wwwroot" embed="false">
+		<file name="index.aardio" path="www\index.aardio" comment="www\index.aardio"/>
+		<file name="web.config" path="www\web.config" comment="www\web.config"/>
+		<folder name="js" path="www\js" comment="www\js" embed="false"/>
+		<folder name="ui" path="www\ui" comment="www\ui">
+			<folder name="res" path="www\ui\res" comment="www\ui\res" embed="false">
+				<folder name="css" path="www\ui\res\css" comment="www\ui\res\css">
+					<file name="full.css" path="www\ui\res\css\full.css" comment="www\ui\res\css\full.css"/>
+					<file name="global.css" path="www\ui\res\css\global.css" comment="www\ui\res\css\global.css"/>
+					<file name="iconfont.eot" path="www\ui\res\css\iconfont.eot" comment="www\ui\res\css\iconfont.eot"/>
+					<file name="iconfont.svg" path="www\ui\res\css\iconfont.svg" comment="www\ui\res\css\iconfont.svg"/>
+					<file name="iconfont.ttf" path="www\ui\res\css\iconfont.ttf" comment="www\ui\res\css\iconfont.ttf"/>
+					<file name="iconfont.woff" path="www\ui\res\css\iconfont.woff" comment="www\ui\res\css\iconfont.woff"/>
+				</folder>
+				<folder name="images" path="www\ui\res\images" comment="www\ui\res\images" embed="false">
+					<file name="fly.jpg" path="www\ui\res\images\fly.jpg" comment="www\ui\res\images\fly.jpg"/>
+					<file name="fork.gif" path="www\ui\res\images\fork.gif" comment="www\ui\res\images\fork.gif"/>
+					<file name="layim.jpg" path="www\ui\res\images\layim.jpg" comment="www\ui\res\images\layim.jpg"/>
+					<file name="loading.gif" path="www\ui\res\images\loading.gif" comment="www\ui\res\images\loading.gif"/>
+					<file name="logo-1.png" path="www\ui\res\images\logo-1.png" comment="www\ui\res\images\logo-1.png"/>
+					<file name="logo.png" path="www\ui\res\images\logo.png" comment="www\ui\res\images\logo.png"/>
+					<file name="pay.jpg" path="www\ui\res\images\pay.jpg" comment="www\ui\res\images\pay.jpg"/>
+					<folder name="avatar" path="www\ui\res\images\avatar" comment="www\ui\res\images\avatar" embed="false">
+						<file name="0.jpg" path="www\ui\res\images\avatar\0.jpg" comment="www\ui\res\images\avatar\0.jpg"/>
+						<file name="00.jpg" path="www\ui\res\images\avatar\00.jpg" comment="www\ui\res\images\avatar\00.jpg"/>
+						<file name="1.jpg" path="www\ui\res\images\avatar\1.jpg" comment="www\ui\res\images\avatar\1.jpg"/>
+						<file name="10.jpg" path="www\ui\res\images\avatar\10.jpg" comment="www\ui\res\images\avatar\10.jpg"/>
+						<file name="11.jpg" path="www\ui\res\images\avatar\11.jpg" comment="www\ui\res\images\avatar\11.jpg"/>
+						<file name="12.jpg" path="www\ui\res\images\avatar\12.jpg" comment="www\ui\res\images\avatar\12.jpg"/>
+						<file name="13.jpg" path="www\ui\res\images\avatar\13.jpg" comment="www\ui\res\images\avatar\13.jpg"/>
+						<file name="14.jpg" path="www\ui\res\images\avatar\14.jpg" comment="www\ui\res\images\avatar\14.jpg"/>
+						<file name="15.jpg" path="www\ui\res\images\avatar\15.jpg" comment="www\ui\res\images\avatar\15.jpg"/>
+						<file name="16.jpg" path="www\ui\res\images\avatar\16.jpg" comment="www\ui\res\images\avatar\16.jpg"/>
+						<file name="17.jpg" path="www\ui\res\images\avatar\17.jpg" comment="www\ui\res\images\avatar\17.jpg"/>
+						<file name="18.jpg" path="www\ui\res\images\avatar\18.jpg" comment="www\ui\res\images\avatar\18.jpg"/>
+						<file name="19.jpg" path="www\ui\res\images\avatar\19.jpg" comment="www\ui\res\images\avatar\19.jpg"/>
+						<file name="2.jpg" path="www\ui\res\images\avatar\2.jpg" comment="www\ui\res\images\avatar\2.jpg"/>
+						<file name="20.jpg" path="www\ui\res\images\avatar\20.jpg" comment="www\ui\res\images\avatar\20.jpg"/>
+						<file name="21.jpg" path="www\ui\res\images\avatar\21.jpg" comment="www\ui\res\images\avatar\21.jpg"/>
+						<file name="22.jpg" path="www\ui\res\images\avatar\22.jpg" comment="www\ui\res\images\avatar\22.jpg"/>
+						<file name="23.jpg" path="www\ui\res\images\avatar\23.jpg" comment="www\ui\res\images\avatar\23.jpg"/>
+						<file name="24.jpg" path="www\ui\res\images\avatar\24.jpg" comment="www\ui\res\images\avatar\24.jpg"/>
+						<file name="25.jpg" path="www\ui\res\images\avatar\25.jpg" comment="www\ui\res\images\avatar\25.jpg"/>
+						<file name="26.jpg" path="www\ui\res\images\avatar\26.jpg" comment="www\ui\res\images\avatar\26.jpg"/>
+						<file name="27.jpg" path="www\ui\res\images\avatar\27.jpg" comment="www\ui\res\images\avatar\27.jpg"/>
+						<file name="28.jpg" path="www\ui\res\images\avatar\28.jpg" comment="www\ui\res\images\avatar\28.jpg"/>
+						<file name="29.jpg" path="www\ui\res\images\avatar\29.jpg" comment="www\ui\res\images\avatar\29.jpg"/>
+						<file name="3.jpg" path="www\ui\res\images\avatar\3.jpg" comment="www\ui\res\images\avatar\3.jpg"/>
+						<file name="30.jpg" path="www\ui\res\images\avatar\30.jpg" comment="www\ui\res\images\avatar\30.jpg"/>
+						<file name="31.jpg" path="www\ui\res\images\avatar\31.jpg" comment="www\ui\res\images\avatar\31.jpg"/>
+						<file name="32.jpg" path="www\ui\res\images\avatar\32.jpg" comment="www\ui\res\images\avatar\32.jpg"/>
+						<file name="33.jpg" path="www\ui\res\images\avatar\33.jpg" comment="www\ui\res\images\avatar\33.jpg"/>
+						<file name="34.jpg" path="www\ui\res\images\avatar\34.jpg" comment="www\ui\res\images\avatar\34.jpg"/>
+						<file name="35.jpg" path="www\ui\res\images\avatar\35.jpg" comment="www\ui\res\images\avatar\35.jpg"/>
+						<file name="36.jpg" path="www\ui\res\images\avatar\36.jpg" comment="www\ui\res\images\avatar\36.jpg"/>
+						<file name="37.jpg" path="www\ui\res\images\avatar\37.jpg" comment="www\ui\res\images\avatar\37.jpg"/>
+						<file name="38.jpg" path="www\ui\res\images\avatar\38.jpg" comment="www\ui\res\images\avatar\38.jpg"/>
+						<file name="39.jpg" path="www\ui\res\images\avatar\39.jpg" comment="www\ui\res\images\avatar\39.jpg"/>
+						<file name="4.jpg" path="www\ui\res\images\avatar\4.jpg" comment="www\ui\res\images\avatar\4.jpg"/>
+						<file name="40.jpg" path="www\ui\res\images\avatar\40.jpg" comment="www\ui\res\images\avatar\40.jpg"/>
+						<file name="41.jpg" path="www\ui\res\images\avatar\41.jpg" comment="www\ui\res\images\avatar\41.jpg"/>
+						<file name="42.jpg" path="www\ui\res\images\avatar\42.jpg" comment="www\ui\res\images\avatar\42.jpg"/>
+						<file name="43.jpg" path="www\ui\res\images\avatar\43.jpg" comment="www\ui\res\images\avatar\43.jpg"/>
+						<file name="44.jpg" path="www\ui\res\images\avatar\44.jpg" comment="www\ui\res\images\avatar\44.jpg"/>
+						<file name="45.jpg" path="www\ui\res\images\avatar\45.jpg" comment="www\ui\res\images\avatar\45.jpg"/>
+						<file name="46.jpg" path="www\ui\res\images\avatar\46.jpg" comment="www\ui\res\images\avatar\46.jpg"/>
+						<file name="47.jpg" path="www\ui\res\images\avatar\47.jpg" comment="www\ui\res\images\avatar\47.jpg"/>
+						<file name="48.jpg" path="www\ui\res\images\avatar\48.jpg" comment="www\ui\res\images\avatar\48.jpg"/>
+						<file name="49.jpg" path="www\ui\res\images\avatar\49.jpg" comment="www\ui\res\images\avatar\49.jpg"/>
+						<file name="5.jpg" path="www\ui\res\images\avatar\5.jpg" comment="www\ui\res\images\avatar\5.jpg"/>
+						<file name="50.jpg" path="www\ui\res\images\avatar\50.jpg" comment="www\ui\res\images\avatar\50.jpg"/>
+						<file name="6.jpg" path="www\ui\res\images\avatar\6.jpg" comment="www\ui\res\images\avatar\6.jpg"/>
+						<file name="7.jpg" path="www\ui\res\images\avatar\7.jpg" comment="www\ui\res\images\avatar\7.jpg"/>
+						<file name="8.jpg" path="www\ui\res\images\avatar\8.jpg" comment="www\ui\res\images\avatar\8.jpg"/>
+						<file name="9.jpg" path="www\ui\res\images\avatar\9.jpg" comment="www\ui\res\images\avatar\9.jpg"/>
+						<file name="default.png" path="www\ui\res\images\avatar\default.png" comment="www\ui\res\images\avatar\default.png"/>
+					</folder>
+					<folder name="other" path="www\ui\res\images\other" comment="www\ui\res\images\other">
+						<file name="1437100018023.jpg" path="www\ui\res\images\other\1437100018023.jpg" comment="www\ui\res\images\other\1437100018023.jpg"/>
+						<file name="study-a.png" path="www\ui\res\images\other\study-a.png" comment="www\ui\res\images\other\study-a.png"/>
+					</folder>
+				</folder>
+				<folder name="layui" path="www\ui\res\layui" comment="www\ui\res\layui" embed="false">
+					<file name="layui.js" path="www\ui\res\layui\layui.js" comment="www\ui\res\layui\layui.js"/>
+					<folder name="css" path="www\ui\res\layui\css" comment="www\ui\res\layui\css" embed="false">
+						<file name="layui.css" path="www\ui\res\layui\css\layui.css" comment="www\ui\res\layui\css\layui.css"/>
+						<file name="layui.mobile.css" path="www\ui\res\layui\css\layui.mobile.css" comment="www\ui\res\layui\css\layui.mobile.css"/>
+						<folder name="modules" path="www\ui\res\layui\css\modules" comment="www\ui\res\layui\css\modules" embed="false">
+							<file name="code.css" path="www\ui\res\layui\css\modules\code.css" comment="www\ui\res\layui\css\modules\code.css"/>
+							<folder name="laydate" path="www\ui\res\layui\css\modules\laydate" comment="www\ui\res\layui\css\modules\laydate">
+								<file name="icon.png" path="www\ui\res\layui\css\modules\laydate\icon.png" comment="www\ui\res\layui\css\modules\laydate\icon.png"/>
+								<file name="laydate.css" path="www\ui\res\layui\css\modules\laydate\laydate.css" comment="www\ui\res\layui\css\modules\laydate\laydate.css"/>
+							</folder>
+							<folder name="layer" path="www\ui\res\layui\css\modules\layer" comment="www\ui\res\layui\css\modules\layer">
+								<folder name="default" path="www\ui\res\layui\css\modules\layer\default" comment="www\ui\res\layui\css\modules\layer\default" embed="false">
+									<file name="icon-ext.png" path="www\ui\res\layui\css\modules\layer\default\icon-ext.png" comment="www\ui\res\layui\css\modules\layer\default\icon-ext.png"/>
+									<file name="icon.png" path="www\ui\res\layui\css\modules\layer\default\icon.png" comment="www\ui\res\layui\css\modules\layer\default\icon.png"/>
+									<file name="layer.css" path="www\ui\res\layui\css\modules\layer\default\layer.css" comment="www\ui\res\layui\css\modules\layer\default\layer.css"/>
+									<file name="loading-0.gif" path="www\ui\res\layui\css\modules\layer\default\loading-0.gif" comment="www\ui\res\layui\css\modules\layer\default\loading-0.gif"/>
+									<file name="loading-1.gif" path="www\ui\res\layui\css\modules\layer\default\loading-1.gif" comment="www\ui\res\layui\css\modules\layer\default\loading-1.gif"/>
+									<file name="loading-2.gif" path="www\ui\res\layui\css\modules\layer\default\loading-2.gif" comment="www\ui\res\layui\css\modules\layer\default\loading-2.gif"/>
+								</folder>
+							</folder>
+						</folder>
+					</folder>
+					<folder name="font" path="www\ui\res\layui\font" comment="www\ui\res\layui\font">
+						<file name="iconfont.eot" path="www\ui\res\layui\font\iconfont.eot" comment="www\ui\res\layui\font\iconfont.eot"/>
+						<file name="iconfont.svg" path="www\ui\res\layui\font\iconfont.svg" comment="www\ui\res\layui\font\iconfont.svg"/>
+						<file name="iconfont.ttf" path="www\ui\res\layui\font\iconfont.ttf" comment="www\ui\res\layui\font\iconfont.ttf"/>
+						<file name="iconfont.woff" path="www\ui\res\layui\font\iconfont.woff" comment="www\ui\res\layui\font\iconfont.woff"/>
+					</folder>
+					<folder name="images" path="www\ui\res\layui\images" comment="www\ui\res\layui\images">
+						<folder name="face" path="www\ui\res\layui\images\face" comment="www\ui\res\layui\images\face">
+							<file name="0.gif" path="www\ui\res\layui\images\face\0.gif" comment="www\ui\res\layui\images\face\0.gif"/>
+							<file name="1.gif" path="www\ui\res\layui\images\face\1.gif" comment="www\ui\res\layui\images\face\1.gif"/>
+							<file name="10.gif" path="www\ui\res\layui\images\face\10.gif" comment="www\ui\res\layui\images\face\10.gif"/>
+							<file name="11.gif" path="www\ui\res\layui\images\face\11.gif" comment="www\ui\res\layui\images\face\11.gif"/>
+							<file name="12.gif" path="www\ui\res\layui\images\face\12.gif" comment="www\ui\res\layui\images\face\12.gif"/>
+							<file name="13.gif" path="www\ui\res\layui\images\face\13.gif" comment="www\ui\res\layui\images\face\13.gif"/>
+							<file name="14.gif" path="www\ui\res\layui\images\face\14.gif" comment="www\ui\res\layui\images\face\14.gif"/>
+							<file name="15.gif" path="www\ui\res\layui\images\face\15.gif" comment="www\ui\res\layui\images\face\15.gif"/>
+							<file name="16.gif" path="www\ui\res\layui\images\face\16.gif" comment="www\ui\res\layui\images\face\16.gif"/>
+							<file name="17.gif" path="www\ui\res\layui\images\face\17.gif" comment="www\ui\res\layui\images\face\17.gif"/>
+							<file name="18.gif" path="www\ui\res\layui\images\face\18.gif" comment="www\ui\res\layui\images\face\18.gif"/>
+							<file name="19.gif" path="www\ui\res\layui\images\face\19.gif" comment="www\ui\res\layui\images\face\19.gif"/>
+							<file name="2.gif" path="www\ui\res\layui\images\face\2.gif" comment="www\ui\res\layui\images\face\2.gif"/>
+							<file name="20.gif" path="www\ui\res\layui\images\face\20.gif" comment="www\ui\res\layui\images\face\20.gif"/>
+							<file name="21.gif" path="www\ui\res\layui\images\face\21.gif" comment="www\ui\res\layui\images\face\21.gif"/>
+							<file name="22.gif" path="www\ui\res\layui\images\face\22.gif" comment="www\ui\res\layui\images\face\22.gif"/>
+							<file name="23.gif" path="www\ui\res\layui\images\face\23.gif" comment="www\ui\res\layui\images\face\23.gif"/>
+							<file name="24.gif" path="www\ui\res\layui\images\face\24.gif" comment="www\ui\res\layui\images\face\24.gif"/>
+							<file name="25.gif" path="www\ui\res\layui\images\face\25.gif" comment="www\ui\res\layui\images\face\25.gif"/>
+							<file name="26.gif" path="www\ui\res\layui\images\face\26.gif" comment="www\ui\res\layui\images\face\26.gif"/>
+							<file name="27.gif" path="www\ui\res\layui\images\face\27.gif" comment="www\ui\res\layui\images\face\27.gif"/>
+							<file name="28.gif" path="www\ui\res\layui\images\face\28.gif" comment="www\ui\res\layui\images\face\28.gif"/>
+							<file name="29.gif" path="www\ui\res\layui\images\face\29.gif" comment="www\ui\res\layui\images\face\29.gif"/>
+							<file name="3.gif" path="www\ui\res\layui\images\face\3.gif" comment="www\ui\res\layui\images\face\3.gif"/>
+							<file name="30.gif" path="www\ui\res\layui\images\face\30.gif" comment="www\ui\res\layui\images\face\30.gif"/>
+							<file name="31.gif" path="www\ui\res\layui\images\face\31.gif" comment="www\ui\res\layui\images\face\31.gif"/>
+							<file name="32.gif" path="www\ui\res\layui\images\face\32.gif" comment="www\ui\res\layui\images\face\32.gif"/>
+							<file name="33.gif" path="www\ui\res\layui\images\face\33.gif" comment="www\ui\res\layui\images\face\33.gif"/>
+							<file name="34.gif" path="www\ui\res\layui\images\face\34.gif" comment="www\ui\res\layui\images\face\34.gif"/>
+							<file name="35.gif" path="www\ui\res\layui\images\face\35.gif" comment="www\ui\res\layui\images\face\35.gif"/>
+							<file name="36.gif" path="www\ui\res\layui\images\face\36.gif" comment="www\ui\res\layui\images\face\36.gif"/>
+							<file name="37.gif" path="www\ui\res\layui\images\face\37.gif" comment="www\ui\res\layui\images\face\37.gif"/>
+							<file name="38.gif" path="www\ui\res\layui\images\face\38.gif" comment="www\ui\res\layui\images\face\38.gif"/>
+							<file name="39.gif" path="www\ui\res\layui\images\face\39.gif" comment="www\ui\res\layui\images\face\39.gif"/>
+							<file name="4.gif" path="www\ui\res\layui\images\face\4.gif" comment="www\ui\res\layui\images\face\4.gif"/>
+							<file name="40.gif" path="www\ui\res\layui\images\face\40.gif" comment="www\ui\res\layui\images\face\40.gif"/>
+							<file name="41.gif" path="www\ui\res\layui\images\face\41.gif" comment="www\ui\res\layui\images\face\41.gif"/>
+							<file name="42.gif" path="www\ui\res\layui\images\face\42.gif" comment="www\ui\res\layui\images\face\42.gif"/>
+							<file name="43.gif" path="www\ui\res\layui\images\face\43.gif" comment="www\ui\res\layui\images\face\43.gif"/>
+							<file name="44.gif" path="www\ui\res\layui\images\face\44.gif" comment="www\ui\res\layui\images\face\44.gif"/>
+							<file name="45.gif" path="www\ui\res\layui\images\face\45.gif" comment="www\ui\res\layui\images\face\45.gif"/>
+							<file name="46.gif" path="www\ui\res\layui\images\face\46.gif" comment="www\ui\res\layui\images\face\46.gif"/>
+							<file name="47.gif" path="www\ui\res\layui\images\face\47.gif" comment="www\ui\res\layui\images\face\47.gif"/>
+							<file name="48.gif" path="www\ui\res\layui\images\face\48.gif" comment="www\ui\res\layui\images\face\48.gif"/>
+							<file name="49.gif" path="www\ui\res\layui\images\face\49.gif" comment="www\ui\res\layui\images\face\49.gif"/>
+							<file name="5.gif" path="www\ui\res\layui\images\face\5.gif" comment="www\ui\res\layui\images\face\5.gif"/>
+							<file name="50.gif" path="www\ui\res\layui\images\face\50.gif" comment="www\ui\res\layui\images\face\50.gif"/>
+							<file name="51.gif" path="www\ui\res\layui\images\face\51.gif" comment="www\ui\res\layui\images\face\51.gif"/>
+							<file name="52.gif" path="www\ui\res\layui\images\face\52.gif" comment="www\ui\res\layui\images\face\52.gif"/>
+							<file name="53.gif" path="www\ui\res\layui\images\face\53.gif" comment="www\ui\res\layui\images\face\53.gif"/>
+							<file name="54.gif" path="www\ui\res\layui\images\face\54.gif" comment="www\ui\res\layui\images\face\54.gif"/>
+							<file name="55.gif" path="www\ui\res\layui\images\face\55.gif" comment="www\ui\res\layui\images\face\55.gif"/>
+							<file name="56.gif" path="www\ui\res\layui\images\face\56.gif" comment="www\ui\res\layui\images\face\56.gif"/>
+							<file name="57.gif" path="www\ui\res\layui\images\face\57.gif" comment="www\ui\res\layui\images\face\57.gif"/>
+							<file name="58.gif" path="www\ui\res\layui\images\face\58.gif" comment="www\ui\res\layui\images\face\58.gif"/>
+							<file name="59.gif" path="www\ui\res\layui\images\face\59.gif" comment="www\ui\res\layui\images\face\59.gif"/>
+							<file name="6.gif" path="www\ui\res\layui\images\face\6.gif" comment="www\ui\res\layui\images\face\6.gif"/>
+							<file name="60.gif" path="www\ui\res\layui\images\face\60.gif" comment="www\ui\res\layui\images\face\60.gif"/>
+							<file name="61.gif" path="www\ui\res\layui\images\face\61.gif" comment="www\ui\res\layui\images\face\61.gif"/>
+							<file name="62.gif" path="www\ui\res\layui\images\face\62.gif" comment="www\ui\res\layui\images\face\62.gif"/>
+							<file name="63.gif" path="www\ui\res\layui\images\face\63.gif" comment="www\ui\res\layui\images\face\63.gif"/>
+							<file name="64.gif" path="www\ui\res\layui\images\face\64.gif" comment="www\ui\res\layui\images\face\64.gif"/>
+							<file name="65.gif" path="www\ui\res\layui\images\face\65.gif" comment="www\ui\res\layui\images\face\65.gif"/>
+							<file name="66.gif" path="www\ui\res\layui\images\face\66.gif" comment="www\ui\res\layui\images\face\66.gif"/>
+							<file name="67.gif" path="www\ui\res\layui\images\face\67.gif" comment="www\ui\res\layui\images\face\67.gif"/>
+							<file name="68.gif" path="www\ui\res\layui\images\face\68.gif" comment="www\ui\res\layui\images\face\68.gif"/>
+							<file name="69.gif" path="www\ui\res\layui\images\face\69.gif" comment="www\ui\res\layui\images\face\69.gif"/>
+							<file name="7.gif" path="www\ui\res\layui\images\face\7.gif" comment="www\ui\res\layui\images\face\7.gif"/>
+							<file name="70.gif" path="www\ui\res\layui\images\face\70.gif" comment="www\ui\res\layui\images\face\70.gif"/>
+							<file name="71.gif" path="www\ui\res\layui\images\face\71.gif" comment="www\ui\res\layui\images\face\71.gif"/>
+							<file name="8.gif" path="www\ui\res\layui\images\face\8.gif" comment="www\ui\res\layui\images\face\8.gif"/>
+							<file name="9.gif" path="www\ui\res\layui\images\face\9.gif" comment="www\ui\res\layui\images\face\9.gif"/>
+						</folder>
+					</folder>
+					<folder name="lay" path="www\ui\res\layui\lay" comment="www\ui\res\layui\lay" embed="false">
+						<folder name="dest" path="www\ui\res\layui\lay\dest" comment="www\ui\res\layui\lay\dest">
+							<file name="layui.all.js" path="www\ui\res\layui\lay\dest\layui.all.js" comment="www\ui\res\layui\lay\dest\layui.all.js"/>
+						</folder>
+						<folder name="modules" path="www\ui\res\layui\lay\modules" comment="www\ui\res\layui\lay\modules" embed="false">
+							<file name="code.js" path="www\ui\res\layui\lay\modules\code.js" comment="www\ui\res\layui\lay\modules\code.js"/>
+							<file name="element.js" path="www\ui\res\layui\lay\modules\element.js" comment="www\ui\res\layui\lay\modules\element.js"/>
+							<file name="flow.js" path="www\ui\res\layui\lay\modules\flow.js" comment="www\ui\res\layui\lay\modules\flow.js"/>
+							<file name="form.js" path="www\ui\res\layui\lay\modules\form.js" comment="www\ui\res\layui\lay\modules\form.js"/>
+							<file name="jquery.js" path="www\ui\res\layui\lay\modules\jquery.js" comment="www\ui\res\layui\lay\modules\jquery.js"/>
+							<file name="laydate.js" path="www\ui\res\layui\lay\modules\laydate.js" comment="www\ui\res\layui\lay\modules\laydate.js"/>
+							<file name="layedit.js" path="www\ui\res\layui\lay\modules\layedit.js" comment="www\ui\res\layui\lay\modules\layedit.js"/>
+							<file name="layer.js" path="www\ui\res\layui\lay\modules\layer.js" comment="www\ui\res\layui\lay\modules\layer.js"/>
+							<file name="laypage.js" path="www\ui\res\layui\lay\modules\laypage.js" comment="www\ui\res\layui\lay\modules\laypage.js"/>
+							<file name="laytpl.js" path="www\ui\res\layui\lay\modules\laytpl.js" comment="www\ui\res\layui\lay\modules\laytpl.js"/>
+							<file name="mobile.js" path="www\ui\res\layui\lay\modules\mobile.js" comment="www\ui\res\layui\lay\modules\mobile.js"/>
+							<file name="tree.js" path="www\ui\res\layui\lay\modules\tree.js" comment="www\ui\res\layui\lay\modules\tree.js"/>
+							<file name="upload.js" path="www\ui\res\layui\lay\modules\upload.js" comment="www\ui\res\layui\lay\modules\upload.js"/>
+							<file name="util.js" path="www\ui\res\layui\lay\modules\util.js" comment="www\ui\res\layui\lay\modules\util.js"/>
+						</folder>
+					</folder>
+				</folder>
+				<folder name="mods" path="www\ui\res\mods" comment="www\ui\res\mods" embed="false">
+					<file name="face.js" path="www\ui\res\mods\face.js" comment="www\ui\res\mods\face.js"/>
+					<file name="index.js" path="www\ui\res\mods\index.js" comment="www\ui\res\mods\index.js"/>
+					<file name="jie.js" path="www\ui\res\mods\jie.js" comment="www\ui\res\mods\jie.js"/>
+					<file name="user.js" path="www\ui\res\mods\user.js" comment="www\ui\res\mods\user.js"/>
+					<file name="validator.js" path="www\ui\res\mods\validator.js" comment="www\ui\res\mods\validator.js"/>
+				</folder>
+			</folder>
+		</folder>
+	</folder>
+</project>

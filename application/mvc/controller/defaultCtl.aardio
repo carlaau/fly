@@ -1,0 +1,13 @@
+
+namespace mvc.controller.default
+
+base = ..mvc.controller.web.base();//继承基类控制器
+
+index = function(){
+	response.redirect(..mvcapp.urlAction("index","web.login"))
+}
+
+//向页面输出验证码
+getVerCode = function(){
+	..common.code.write();
+}
