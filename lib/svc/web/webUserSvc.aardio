@@ -38,7 +38,7 @@ getInfo = function(userId){
 
 //注册保存
 regSave = function(tpost){
-	var tab,err = webUserDB.getFirstList("email=@email or nickname=@nickname", {email=tpost.email;nickname=tpost.username});
+	var tab,err = webUserDB.getFirstList("email=@email and nickname=@nickname", {email=tpost.email;nickname=tpost.username});
 	if(!tab) return false,err;	
 	if(table.count(tab) > 0) return false,"邮箱或呢称已被注册";
  

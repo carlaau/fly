@@ -9,7 +9,7 @@ message = class {
 	nums = function(){
 		var tab = {}
 		tab.status = 0;
-		tab.count = 2;
+		//tab.count = 2;
 		return tab; 	
 	}
 	
