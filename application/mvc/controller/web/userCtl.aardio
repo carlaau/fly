@@ -61,7 +61,26 @@ user = class {
 		..carl.session.clear()
 		return true
 	}
-
+	
+	upload = function(){
+		var imageUrl,err = ..common.uploadFile();//获取上传后的图片
+		if(imageUrl){
+			var t = {".jpg";".gif";".jpeg";".png"}
+			var ext = string.lower(io.splitpath(imageUrl).ext);
+			if(!table.find(t,ext)){
+				io.remove(imageUrl);
+				return false,"不支持图片格式"; 
+			}
+		}
+		if(imageUrl) imageUrl,err = ..common.imageThumbnail(imageUrl,168,168);//生成缩略图
+		if(!imageUrl) return false,err;
+		var tpost = {}
+		tpost.AvatarUrl = imageUrl;
+		var ok,err = webUserSvc.update(tpost,this.base.userId);
+		if(!ok) return false,err;
+		return true
+	}
+	
 	
 }
 
