@@ -4,7 +4,7 @@
 /aardio-cgi/config/*
 
 /Publish/*
-/log/session/*
+/log/session/
 
 /www/web.config
 /www/upload/*

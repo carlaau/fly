@@ -12,30 +12,39 @@
 		<folder name="mvc" path="application\mvc" comment="application\mvc" embed="false">
 			<folder name="controller" path="application\mvc\controller" comment="application\mvc\controller" embed="false">
 				<file name="defaultCtl.aardio" path="application\mvc\controller\defaultCtl.aardio" comment="application\mvc\controller\defaultCtl.aardio"/>
-				<folder name="web" path="application\mvc\controller\web" comment="application\mvc\controller\web">
+				<folder name="web" path="application\mvc\controller\web" comment="application\mvc\controller\web" embed="false">
 					<file name="baseCtl.aardio" path="application\mvc\controller\web\baseCtl.aardio" comment="application\mvc\controller\web\baseCtl.aardio"/>
 					<file name="loginCtl.aardio" path="application\mvc\controller\web\loginCtl.aardio" comment="application\mvc\controller\web\loginCtl.aardio"/>
 					<file name="messageCtl.aardio" path="application\mvc\controller\web\messageCtl.aardio" comment="application\mvc\controller\web\messageCtl.aardio"/>
 					<file name="regCtl.aardio" path="application\mvc\controller\web\regCtl.aardio" comment="application\mvc\controller\web\regCtl.aardio"/>
 					<file name="userCtl.aardio" path="application\mvc\controller\web\userCtl.aardio" comment="application\mvc\controller\web\userCtl.aardio"/>
+					<file name="postCtl.aardio" path="application\mvc\controller\web\postCtl.aardio" comment="application\mvc\controller\web\postCtl.aardio"/>
 				</folder>
 			</folder>
 			<folder name="view" path="application\mvc\view" comment="application\mvc\view" embed="false">
+				<file name="index.aardio" path="application\mvc\view\index.aardio" comment="application\mvc\view\index.aardio"/>
 				<folder name="web" path="application\mvc\view\web" comment="application\mvc\view\web" embed="false">
 					<folder name="common" path="application\mvc\view\web\common" comment="application\mvc\view\web\common" embed="false">
 						<file name="footer.aardio" path="application\mvc\view\web\common\footer.aardio" comment="application\mvc\view\web\common\footer.aardio"/>
 						<file name="header.aardio" path="application\mvc\view\web\common\header.aardio" comment="application\mvc\view\web\common\header.aardio"/>
 						<file name="user-nav.aardio" path="application\mvc\view\web\common\user-nav.aardio" comment="application\mvc\view\web\common\user-nav.aardio"/>
+						<file name="code.aardio" path="application\mvc\view\web\common\code.aardio" comment="application\mvc\view\web\common\code.aardio"/>
+						<file name="laypage.aardio" path="application\mvc\view\web\common\laypage.aardio" comment="application\mvc\view\web\common\laypage.aardio"/>
 					</folder>
-					<folder name="user" path="application\mvc\view\web\user" comment="application\mvc\view\web\user" embed="false">
-						<file name="login.aardio" path="application\mvc\view\web\user\login.aardio" comment="application\mvc\view\web\user\login.aardio"/>
-						<file name="reg.aardio" path="application\mvc\view\web\user\reg.aardio" comment="application\mvc\view\web\user\reg.aardio"/>
-						<file name="index.aardio" path="application\mvc\view\web\user\index.aardio" comment="application\mvc\view\web\user\index.aardio"/>
-						<file name="set.aardio" path="application\mvc\view\web\user\set.aardio" comment="application\mvc\view\web\user\set.aardio"/>
-						<file name="home.aardio" path="application\mvc\view\web\user\home.aardio" comment="application\mvc\view\web\user\home.aardio"/>
-						<file name="message.aardio" path="application\mvc\view\web\user\message.aardio" comment="application\mvc\view\web\user\message.aardio"/>
+					<folder name="user" path="application\mvc\view\web\user" comment="application\mvc\view\web\user">
 						<file name="activate.aardio" path="application\mvc\view\web\user\activate.aardio" comment="application\mvc\view\web\user\activate.aardio"/>
 						<file name="forget.aardio" path="application\mvc\view\web\user\forget.aardio" comment="application\mvc\view\web\user\forget.aardio"/>
+						<file name="home.aardio" path="application\mvc\view\web\user\home.aardio" comment="application\mvc\view\web\user\home.aardio"/>
+						<file name="index.aardio" path="application\mvc\view\web\user\index.aardio" comment="application\mvc\view\web\user\index.aardio"/>
+						<file name="login.aardio" path="application\mvc\view\web\user\login.aardio" comment="application\mvc\view\web\user\login.aardio"/>
+						<file name="message.aardio" path="application\mvc\view\web\user\message.aardio" comment="application\mvc\view\web\user\message.aardio"/>
+						<file name="reg.aardio" path="application\mvc\view\web\user\reg.aardio" comment="application\mvc\view\web\user\reg.aardio"/>
+						<file name="set.aardio" path="application\mvc\view\web\user\set.aardio" comment="application\mvc\view\web\user\set.aardio"/>
+					</folder>
+					<folder name="post" path="application\mvc\view\web\post" comment="目录" embed="false">
+						<file name="add.aardio" path="application\mvc\view\web\post\add.aardio" comment="application\mvc\view\web\post\add.aardio"/>
+						<file name="index.aardio" path="application\mvc\view\web\post\index.aardio" comment="application\mvc\view\web\post\index.aardio"/>
+						<file name="detail.aardio" path="application\mvc\view\web\post\detail.aardio" comment="application\mvc\view\web\post\detail.aardio"/>
 					</folder>
 				</folder>
 			</folder>

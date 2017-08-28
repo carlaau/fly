@@ -19,7 +19,7 @@ namespace config.webconfig
 但错误都会默认记录在/log/error.log文件里
 (正式发布建议关闭)
 */
-debug = false;
+debug = true;
 
 /*
 数据库执行错误是否记录执行的sql语句，
@@ -50,3 +50,5 @@ adminLoginUrl = "/admin/login.aardio";
 webTitle = "aardio mvc网站标题";//
 
 copyright = "www.aardio.org"
+
+pageSize = 10;//前端每页显示帖子数

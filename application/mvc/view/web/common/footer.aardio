@@ -7,7 +7,7 @@
 </div>
 <script src="/ui/res/layui/layui.js"></script>
 <script>
-layui.cache.page = '<?=owner.page?>';
+layui.cache.page = '<?=owner.cachePage?>';
 <?
 if(owner.base.isLogin){
 	var sex = "";
@@ -48,6 +48,5 @@ layui.config({
 }).extend({
   fly: 'index'
 }).use('fly');
-
 
 </script>

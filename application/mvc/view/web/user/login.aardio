@@ -30,12 +30,13 @@ owner.view.loadcode("web.common.header",...);
               <div class="layui-form-item">
                 <label for="L_vercode" class="layui-form-label">验证码</label>
                 <div class="layui-input-inline">
-                  <input type="text" id="L_vercode" name="vercode" required lay-verify="required" placeholder="请输入验证码" autocomplete="off" class="layui-input">
+                  <input type="text" id="L_vercode" name="vercode" required lay-verify="required" placeholder="点击输入验证码" autocomplete="off" class="layui-input">
                 </div>
                 <div class="layui-form-mid">
-                  <img id="btnVerCode" style="cursor:pointer;" src="<?=mvcapp.urlAction("getVerCode&_=" ++ math.random(),"default")?>" />
+                  <img id="img_vercode" style="cursor:pointer;"/>
                 </div>
               </div>
+               <input type="hidden" name="redirect" value="<?=..request.get["redirect"]?>">
               <div class="layui-form-item">
                 <button class="layui-btn" lay-filter="*" lay-submit>立即登录</button>
                 <span style="padding-left:20px;">
@@ -59,19 +60,7 @@ owner.view.loadcode("web.common.header",...);
 </div>
 
 <? owner.view.loadcode("web.common.footer");?>
-
-<script>
-layui.config({
-    base:'/ui/res/mods/'
-}).use(['layer'], function () {
-    var layer = layui.layer
-        , $ = layui.jquery
-
-    $('#btnVerCode').off('click').on('click', function () {
-        this.src = "<?=mvcapp.urlAction("getVerCode","default")?>&_=" + new Date().getTime();
-    });
-})
-</script>
+<? owner.view.loadcode("web.common.code");?>
 </body>
 </html>
 

@@ -95,6 +95,50 @@ formatSqlParameters(dbconfig,sql,不定参数) = formatSqlParameters
 sqlBefore(sql) = 执行sql之前回调函数，如果返回false，将不再执行sql,根据需要重写此函数,可用于sql过滤，记录等
 end intellisense**/
 
+/**intellisense(dbase.mysql.webCategoryDB)
+getTable(sql,格式化参数) = 执行一条SQL\n成功返回查询结果集table对像\n错误返回:null,err,sql\n每个元素代表一行,每行由N个键值对列组成,键fields为列名结果集\n格式化参数 可省略\n格式化参数与string.format用法兼容,\n格式化参数也可以是一个表参数,用于替换sql中的命名参数,\nsql中用@前缀标明命名参数,命名参数自动过滤所有转义符
+getTableFirst(sql,格式化参数) = 执行一条SQL\n成功返回查询第一条记录table对像,空记录返回空table对像\n错误返回:null,err,sql\n格式化参数 可省略\n格式化参数与string.format用法兼容,\n格式化参数也可以是一个表参数,用于替换sql中的命名参数,\nsql中用@前缀标明命名参数,命名参数自动过滤所有转义符
+getTables(tsql) = 执行多条SQL,成功返回查询table数据集\n错误返回:null,err,sql\n参数:table对像 格式:{"sql1";"sql2"}
+exec(sql,格式化参数) = 执行sql,成功返回ture,失败返回null,err,sql\n格式化参数 可省略\n格式化参数与string.format用法兼容,\n格式化参数也可以是一个表参数,用于替换sql中的命名参数,\nsql中用@前缀标明命名参数,命名参数自动过滤所有转义符
+transaction(tsql) = 事务执行多条sql语句\n成功返回ture,失败返回null,err,sql\n参数:table对像 格式:{"sql1";"sql2"},\n说明:全部执行成功,或全部失败\n mysql表需InnoDB类型
+storedProcedures(name,"其他参数") = 执行存储过程,参数1:存储过程名称,参数2以后,是传存储过程函数参数
+getInsertSql("表名", tab) = 返回新增SQL语句\n参数:表名,table对像 格式:{字段1="值1";字段2="值2"}
+getUpdateSql("表名", tab, where, 格式化参数table) = 返回更新SQL语句\n参数:表名, table对像,where条件,格式化参数table\n参数四 可省略\n参数二格式:{字段1="值1";字段2="值2"}\n格式化参数是一个table表参数,用于替换sql中的命名参数,\nsql中用@前缀标明命名参数,命名参数自动过滤所有转义符
+formatSqlParameters(sql,格式化参数) = 格式化sql\n参数:sql语句,格式化参数\n格式化参数与string.format用法兼容,\n格式化参数也可以是一个表参数,用于替换sql中的命名参数,\nsql中用@前缀标明命名参数,命名参数自动过滤所有转义符
+getPageList(tabPage,mainSql,orderby,where) = 分页查询,参数:分页条件table对像,主SQL,排序SQL语句,where条件\n具体用法请查看dbase.page分页库\n成功返回分页table记录集,失败返回null,err,sql
+getInsertSql(tab) = 操作web_category表\n返回新增SQL语句\n参数:table对像 格式:{字段1="值1";字段2="值2"}
+getUpdateSql(tab, where, 格式化参数table) = 操作web_category表\n返回更新SQL语句\n参数:table对像,where条件,格式化参数table\n参数一格式:{字段1="值1";字段2="值2"}\n参数三 可省略\n格式化参数是一个table表参数,用于替换sql中的命名参数,\nsql中用@前缀标明命名参数,命名参数自动过滤所有转义符
+getAutoId() = 操作web_category表\n获取自主管理主键ID,仅当 tableKeyIdIsAuto=false 有效,即自主管理主键ID,非自增才可调用
+insert(tab) = 操作web_category表\n新增一条记录\n成功返回ture,失败返回null,err,sql\n参数:table对像 格式:{字段1="值1";字段2="值2"}
+insert(tab,true) = 操作web_category表\n新增一条记录\n成功返回自增ID,失败返回null,err,sql\n参数:table对像 格式:{字段1="值1";字段2="值2"}
+update(tab, where, 格式化参数table) = 操作web_category表\n更新记录\n成功返回ture,失败返回null,err,sql\n参数:table对像,where条件,格式化参数table\n参数一格式:{字段1="值1";字段2="值2"}\n参数三可省略\n格式化参数是一个table表参数,用于替换sql中的命名参数,\nsql中用@前缀标明命名参数,命名参数自动过滤所有转义符
+delete(where, 格式化参数) = 操作web_category表\n删除记录\n成功返回ture,失败返回null,err,sql\n参数:where条件,格式化参数\n参数二可省略\n格式化参数与string.format用法兼容,\n格式化参数也可以是一个表参数,用于替换sql中的命名参数,\nsql中用@前缀标明命名参数,命名参数自动过滤所有转义符
+getFirstList(where, 格式化参数) = 操作web_category表\n成功返回where条件查询结果的第一条记录,失败返回null,err,sql\n参数:where条件,格式化参数\n参数二 可省略\n格式化参数与string.format用法兼容,\n格式化参数也可以是一个表参数,用于替换sql中的命名参数,\nsql中用@前缀标明命名参数,命名参数自动过滤所有转义符
+getAllList(where, 格式化参数) = 操作web_category表\n成功返回where条件所有查询结果记录集,失败返回null,err,sql\n参数:where条件,格式化参数\n参数二 可省略\n格式化参数与string.format用法兼容,\n格式化参数也可以是一个表参数,用于替换sql中的命名参数,\nsql中用@前缀标明命名参数,命名参数自动过滤所有转义符
+end intellisense**/
+
+/**intellisense(dbase.mysql.webPostDB)
+getTable(sql,格式化参数) = 执行一条SQL\n成功返回查询结果集table对像\n错误返回:null,err,sql\n每个元素代表一行,每行由N个键值对列组成,键fields为列名结果集\n格式化参数 可省略\n格式化参数与string.format用法兼容,\n格式化参数也可以是一个表参数,用于替换sql中的命名参数,\nsql中用@前缀标明命名参数,命名参数自动过滤所有转义符
+getTableFirst(sql,格式化参数) = 执行一条SQL\n成功返回查询第一条记录table对像,空记录返回空table对像\n错误返回:null,err,sql\n格式化参数 可省略\n格式化参数与string.format用法兼容,\n格式化参数也可以是一个表参数,用于替换sql中的命名参数,\nsql中用@前缀标明命名参数,命名参数自动过滤所有转义符
+getTables(tsql) = 执行多条SQL,成功返回查询table数据集\n错误返回:null,err,sql\n参数:table对像 格式:{"sql1";"sql2"}
+exec(sql,格式化参数) = 执行sql,成功返回ture,失败返回null,err,sql\n格式化参数 可省略\n格式化参数与string.format用法兼容,\n格式化参数也可以是一个表参数,用于替换sql中的命名参数,\nsql中用@前缀标明命名参数,命名参数自动过滤所有转义符
+transaction(tsql) = 事务执行多条sql语句\n成功返回ture,失败返回null,err,sql\n参数:table对像 格式:{"sql1";"sql2"},\n说明:全部执行成功,或全部失败\n mysql表需InnoDB类型
+storedProcedures(name,"其他参数") = 执行存储过程,参数1:存储过程名称,参数2以后,是传存储过程函数参数
+getInsertSql("表名", tab) = 返回新增SQL语句\n参数:表名,table对像 格式:{字段1="值1";字段2="值2"}
+getUpdateSql("表名", tab, where, 格式化参数table) = 返回更新SQL语句\n参数:表名, table对像,where条件,格式化参数table\n参数四 可省略\n参数二格式:{字段1="值1";字段2="值2"}\n格式化参数是一个table表参数,用于替换sql中的命名参数,\nsql中用@前缀标明命名参数,命名参数自动过滤所有转义符
+formatSqlParameters(sql,格式化参数) = 格式化sql\n参数:sql语句,格式化参数\n格式化参数与string.format用法兼容,\n格式化参数也可以是一个表参数,用于替换sql中的命名参数,\nsql中用@前缀标明命名参数,命名参数自动过滤所有转义符
+getPageList(tabPage,mainSql,orderby,where) = 分页查询,参数:分页条件table对像,主SQL,排序SQL语句,where条件\n具体用法请查看dbase.page分页库\n成功返回分页table记录集,失败返回null,err,sql
+getInsertSql(tab) = 操作web_post表\n返回新增SQL语句\n参数:table对像 格式:{字段1="值1";字段2="值2"}
+getUpdateSql(tab, where, 格式化参数table) = 操作web_post表\n返回更新SQL语句\n参数:table对像,where条件,格式化参数table\n参数一格式:{字段1="值1";字段2="值2"}\n参数三 可省略\n格式化参数是一个table表参数,用于替换sql中的命名参数,\nsql中用@前缀标明命名参数,命名参数自动过滤所有转义符
+getAutoId() = 操作web_post表\n获取自主管理主键ID,仅当 tableKeyIdIsAuto=false 有效,即自主管理主键ID,非自增才可调用
+insert(tab) = 操作web_post表\n新增一条记录\n成功返回ture,失败返回null,err,sql\n参数:table对像 格式:{字段1="值1";字段2="值2"}
+insert(tab,true) = 操作web_post表\n新增一条记录\n成功返回自增ID,失败返回null,err,sql\n参数:table对像 格式:{字段1="值1";字段2="值2"}
+update(tab, where, 格式化参数table) = 操作web_post表\n更新记录\n成功返回ture,失败返回null,err,sql\n参数:table对像,where条件,格式化参数table\n参数一格式:{字段1="值1";字段2="值2"}\n参数三可省略\n格式化参数是一个table表参数,用于替换sql中的命名参数,\nsql中用@前缀标明命名参数,命名参数自动过滤所有转义符
+delete(where, 格式化参数) = 操作web_post表\n删除记录\n成功返回ture,失败返回null,err,sql\n参数:where条件,格式化参数\n参数二可省略\n格式化参数与string.format用法兼容,\n格式化参数也可以是一个表参数,用于替换sql中的命名参数,\nsql中用@前缀标明命名参数,命名参数自动过滤所有转义符
+getFirstList(where, 格式化参数) = 操作web_post表\n成功返回where条件查询结果的第一条记录,失败返回null,err,sql\n参数:where条件,格式化参数\n参数二 可省略\n格式化参数与string.format用法兼容,\n格式化参数也可以是一个表参数,用于替换sql中的命名参数,\nsql中用@前缀标明命名参数,命名参数自动过滤所有转义符
+getAllList(where, 格式化参数) = 操作web_post表\n成功返回where条件所有查询结果记录集,失败返回null,err,sql\n参数:where条件,格式化参数\n参数二 可省略\n格式化参数与string.format用法兼容,\n格式化参数也可以是一个表参数,用于替换sql中的命名参数,\nsql中用@前缀标明命名参数,命名参数自动过滤所有转义符
+end intellisense**/
+
 /**intellisense(dbase.mysql.webUserDB)
 getTable(sql,格式化参数) = 执行一条SQL\n成功返回查询结果集table对像\n错误返回:null,err,sql\n每个元素代表一行,每行由N个键值对列组成,键fields为列名结果集\n格式化参数 可省略\n格式化参数与string.format用法兼容,\n格式化参数也可以是一个表参数,用于替换sql中的命名参数,\nsql中用@前缀标明命名参数,命名参数自动过滤所有转义符
 getTableFirst(sql,格式化参数) = 执行一条SQL\n成功返回查询第一条记录table对像,空记录返回空table对像\n错误返回:null,err,sql\n格式化参数 可省略\n格式化参数与string.format用法兼容,\n格式化参数也可以是一个表参数,用于替换sql中的命名参数,\nsql中用@前缀标明命名参数,命名参数自动过滤所有转义符
@@ -115,6 +159,20 @@ update(tab, where, 格式化参数table) = 操作web_user表\n更新记录\n成�
 delete(where, 格式化参数) = 操作web_user表\n删除记录\n成功返回ture,失败返回null,err,sql\n参数:where条件,格式化参数\n参数二可省略\n格式化参数与string.format用法兼容,\n格式化参数也可以是一个表参数,用于替换sql中的命名参数,\nsql中用@前缀标明命名参数,命名参数自动过滤所有转义符
 getFirstList(where, 格式化参数) = 操作web_user表\n成功返回where条件查询结果的第一条记录,失败返回null,err,sql\n参数:where条件,格式化参数\n参数二 可省略\n格式化参数与string.format用法兼容,\n格式化参数也可以是一个表参数,用于替换sql中的命名参数,\nsql中用@前缀标明命名参数,命名参数自动过滤所有转义符
 getAllList(where, 格式化参数) = 操作web_user表\n成功返回where条件所有查询结果记录集,失败返回null,err,sql\n参数:where条件,格式化参数\n参数二 可省略\n格式化参数与string.format用法兼容,\n格式化参数也可以是一个表参数,用于替换sql中的命名参数,\nsql中用@前缀标明命名参数,命名参数自动过滤所有转义符
+end intellisense**/
+
+/**intellisense(svc.web.webCategorySvc)
+getPageList(tabPage) = getPageList
+save(tpost) = save
+getInfo(categoryId) = getInfo
+getCategoryTree() = getCategoryTree
+end intellisense**/
+
+/**intellisense(svc.web.webPostSvc)
+getPageList(tabPage) = getPageList
+save(tpost) = save
+getInfo(postId) = getInfo
+userSavePost(title,content,categoryId,postId,userId) = 用户发帖保存
 end intellisense**/
 
 /**intellisense(svc.web.webUserSvc)

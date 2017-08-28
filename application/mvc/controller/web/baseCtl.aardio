@@ -21,7 +21,12 @@ base = class {
 		
 		this.user = ..carl.mvc.common.proxy(getNowUser());
 		
-	};	
+	};
+	
+	reLogin = function(){
+		reLogin();
+	}
+	
 }
 
 namespace base{
@@ -39,7 +44,10 @@ namespace base{
 			..response.close();
 		}
 		else {
-			..response.redirect(loginUrl);
+			var redirect = ..inet.url.encode(..request.uri);
+			var url = ..string.concat(..request.scheme,"://",..request.host,loginUrl);			
+			url =  ..inet.url.appendExtraInfo(url,"redirect=" ++ redirect);
+			..response.redirect(url);
 		}
 	}
 	

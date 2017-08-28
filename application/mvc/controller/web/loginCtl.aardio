@@ -11,7 +11,7 @@ index = function(){
 	owner.view.loadcode("web.user.login",tabParam);
 }
 
-checkLogin = function(email,pass,vercode){
+checkLogin = function(email,pass,vercode,redirect){
 	if( !..common.checkEmail(email) )
 		return false,"邮箱格式不正确";
 	
@@ -24,10 +24,13 @@ checkLogin = function(email,pass,vercode){
 	var ok,err = webUserSvc.checkLogin(email,pass);//登录
 	if(!ok) return false,err; 
 	
-	return true,"登录成功",..mvcapp.urlAction("index","web.user"); 
+	redirect = #redirect ? redirect : ..mvcapp.urlAction("index","web.user")
+	return true,"登录成功",redirect; 
 }
 
 logout = function(){
 	..carl.session.clear();
-	response.redirect(..mvcapp.urlAction("index","web.login"))
+	var refurl = ..request.headers.referer;
+	refurl = #refurl ? refurl : ..mvcapp.urlAction("index","web.login")
+	response.redirect(refurl);
 }
