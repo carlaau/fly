@@ -91,7 +91,7 @@ post = class {
 		if(!#content) return false,"内容不能为空";
 		
 		var postId = ..common.toNumber(id);
-		if(postId <= 0) return false,"非法ID";
+		if(postId < 0) return false,"非法ID";
 		 
 		var ok,err = ..common.code.check(vercode);//校验验证码
 		if(!ok) return false,err; 
